@@ -1,59 +1,73 @@
-# use diff data types of python
+# Data Types in Python
 
-# 1. Numbers
-# 2. Strings
-# 3. List
-# 4. Tuple
-# 5. Dictionary
+# 1. Integer
+# Integers are whole numbers, positive or negative, without decimals.
+# Example:
+age = 25
+print(f"Age: {age}")
 
+# Real-world usage: Counting items, age calculation, etc.
 
-# 1. Numbers
+# 2. Float
+# Floats are numbers with a decimal point.
+# Example:
+price = 19.99
+print(f"Price: {price}")
 
+# Real-world usage: Financial calculations, measurements, etc.
 
-# integer
-a = 10
-print(a)
+# 3. String
+# Strings are sequences of characters, used to store text.
+# Example:
+name = "John Doe"
+print(f"Name: {name}")
 
-# float
-b = 10.5
-print(b)
+# Real-world usage: Storing names, addresses, any textual information.
 
-# complex
-c = 10 + 5j
-print(c)
+# 4. Boolean
+# Booleans represent one of two values: True or False.
+# Example:
+is_student = True
+print(f"Is student: {is_student}")
 
-# 2. Strings
-name = "Python"
-print(name)
+# Real-world usage: Conditional statements, flags, etc.
 
-# 3. List
-# List is a collection which is ordered and changeable. Allows duplicate members.
+# 5. List
+# Lists are used to store multiple items in a single variable.
+# Example:
+fruits = ["apple", "banana", "cherry"]
+print(f"Fruits: {fruits}")
 
-list = [10, 20, 30, 40, 50]
-print(list)
+# Real-world usage: Storing collections of items, such as a list of users.
 
-# 4. Tuple
-# Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+# 6. Tuple
+# Tuples are similar to lists but are immutable (cannot be changed).
+# Example:
+coordinates = (10.0, 20.0)
+print(f"Coordinates: {coordinates}")
 
-tuple = (10, 20, 30, 40, 50)
-print(tuple)
+# Real-world usage: Storing fixed collections of items, such as geographic coordinates.
 
-# 5. Dictionary
-# Dictionary is a collection which is unordered, changeable and indexed. No duplicate members.
+# 7. Dictionary
+# Dictionaries are used to store data values in key:value pairs.
+# Example:
+person = {"name": "Alice", "age": 30}
+print(f"Person: {person}")
 
-dict = {"name": "Python", "version": 3.8}
-print(dict)
+# Real-world usage: Storing related data, such as user profiles.
 
+# 8. Set
+# Sets are used to store multiple items in a single variable, but cannot have duplicate values.
+# Example:
+unique_numbers = {1, 2, 3, 4, 4}
+print(f"Unique numbers: {unique_numbers}")
 
-# 7. Boolean
-# Boolean represents one of two values: True or False.
+# Real-world usage: Storing unique items, such as a set of unique IDs.
 
-bool = True
-print(bool)
+# 9. NoneType
+# NoneType represents the absence of a value.
+# Example:
+nothing = None
+print(f"Nothing: {nothing}")
 
-# 8. None
-# None is a special constant in Python that represents the absence of a value or a null value.
-
-
-none = None
-print(none)
+# Real-world usage: Default values, placeholders for optional data.
