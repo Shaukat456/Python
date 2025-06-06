@@ -1,7 +1,7 @@
-# 🧪 The Mad Scientist's Guide to Python
+<!-- # 🧪 Python
 
 <div align="center">
-  
+
 ![Python Logo](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Data Structures](https://img.shields.io/badge/Data_Structures-6A0DAD?style=for-the-badge&logo=buffer&logoColor=white)
 ![Algorithms](https://img.shields.io/badge/Algorithms-00FFFF?style=for-the-badge&logo=thealgorithms&logoColor=black)
@@ -181,7 +181,7 @@ _"Here we create SOPHISTICATED SYSTEMS! Powerful algorithms and data structures!
 
 ## ⏱️ Algorithmic Complexity
 
-_"EFFICIENCY IS CRUCIAL, Boss! Every mad scientist must understand the cost of their experiments! xD"_
+_"EFFICIENCY IS CRUCIAL, Boss! Every must understand the cost of their experiments! xD"_
 
 ### Time Complexity
 
@@ -539,7 +539,7 @@ def create_large_data_structure():
 
 ## 📚 Resources
 
-_"Even mad scientists consult the ancient tomes of knowledge!"_
+_"Even consult the ancient tomes of knowledge!"_
 
 ### Official Documentation
 
@@ -694,7 +694,7 @@ _"Want to contribute to my grand experiments? I welcome collaborators with innov
 ### Contribution Guidelines
 
 - Follow the existing coding style
-- Add comments explaining your mad genius
+- Add comments
 - Include tests for your new features
 - Update documentation to reflect changes
 - Add complexity analysis for new algorithms
@@ -704,10 +704,10 @@ _"Want to contribute to my grand experiments? I welcome collaborators with innov
 <div align="center">
   <img src="https://avatars.githubusercontent.com/u/shaukat456" alt="Shaukat Sohail" width="150" style="border-radius: 50%;">
   <h3>Shaukat Sohail</h3>
-  
+
   [![Portfolio](https://img.shields.io/badge/Portfolio-shaukatsohail.vercel.app-brightgreen?style=flat-square&logo=vercel)](https://shaukatsohail.vercel.app)
   [![GitHub](https://img.shields.io/badge/GitHub-shaukat456-black?style=flat-square&logo=github)](https://github.com/shaukat456)
-  
+
 </div>
 
 _"When not in his laboratory, Shaukat creates elegant solutions to complex problems. With expertise in Python and web technologies, he's committed to sharing knowledge and building useful tools for the community."_
@@ -716,7 +716,7 @@ _"Investigate his other experiments on his [personal website](https://shaukatsoh
 
 ## ⚠️ Safety Warnings
 
-_"Even in a mad scientist's lab, safety is paramount, Boss! xD"_
+_"Even in lab, safety is paramount, Boss! xD"_
 
 - Always create backups before experimenting with your own code
 - Test potentially destructive operations in a controlled environment
@@ -727,7 +727,7 @@ _"Even in a mad scientist's lab, safety is paramount, Boss! xD"_
 
 <div align="center">
   <p><i>"In code, there are no failures—only unexpected results!"</i></p>
-  
+
   ![Lab Visitors](https://visitor-badge.laobi.icu/badge?page_id=shaukat456.python-learning-repo)
   [![Star this lab](https://img.shields.io/github/stars/shaukat456/python-learning-repo?style=social)](https://github.com/shaukat456/python-learning-repo)
-</div>
+</div> -->

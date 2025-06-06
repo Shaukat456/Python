@@ -68,4 +68,3 @@
 - Join online communities and forums.
 
 Happy Learning Boss
-Regards Mad Scientist

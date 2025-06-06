@@ -16,7 +16,6 @@ class Cat:
 
 cat1 = Cat("Tom", 5)
 
-
 # Example 2
 class Car:
     year = 2020

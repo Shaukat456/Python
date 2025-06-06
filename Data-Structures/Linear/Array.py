@@ -40,7 +40,6 @@ print(arr[2])  # Accessing element at index 2 (Output: 30)
 # - **Insert/Delete:** O(n) (because shifting is required)
 
 # ---
-
 # ### **2️⃣ Multi-Dimensional Arrays – A Table or Grid**
 # 💡 **Analogy:** **An Excel Sheet (Rows & Columns)**
 # Each **row** represents a **list**, and all rows together form a **2D array**.
