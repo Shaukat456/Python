@@ -9,6 +9,28 @@
 # else:
 #     # block of code
 
+
+# | Use Case        | Logic You Want to Implement          |
+# | --------------- | ------------------------------------ |
+# | Decision making | "Choose A or B based on condition"   |
+# | Validation      | "Is age valid?"                      |
+# | Input response  | "Did the user type X or Y?"          |
+# | Business rules  | "Give discount if condition matches" |
+# | Menus / Choices | CLI-based apps, game options         |
+
+
+#  Types of Conditions
+# You can use:
+
+# Comparison: ==, !=, <, >, <=, >=
+
+# Logic gates: and, or, not
+
+# Membership: in, not in
+
+# Boolean variables: True, False
+
+
 # give a number and check if it is even or odd
 num = 10
 
@@ -52,6 +74,7 @@ else:
         print("Negative and Odd")
 # excercises to get a good understanding of if else statement
 
+
 # 1. Check if the number is divisible by 5 or not with solution
 
 number = 10
@@ -82,6 +105,18 @@ else:
     print("Odd")
 
 
+# 4. Check if a person is eligible to vote based on age
+age = int(input("Enter your age: "))
+nationality = input("Enter your nationality: ")
+
+if age >= 18 and nationality == "Pakistani":
+    print("Eligible to vote")
+
+else:
+    print("Not eligible to vote")
+
+
+# 5. check if
 age = 18
 if age >= 18:
 
@@ -229,3 +264,39 @@ if "scores" in student:
         print("Math score not found")
 else:
     print("No scores available")
+
+
+# This example checks if a user's choice of fruit is available in a predefined list of fruits.
+fruits = ["apple", "banana", "orange"]
+choice = input("Pick a fruit: ")
+
+if choice in fruits:
+    print("Available!")
+else:
+    print("Not available!")
+
+
+# Boolean Variables
+
+is_logged_in = True
+
+if is_logged_in:
+    print("Welcome!")
+else:
+    print("Please log in.")
+
+
+# Convert real-life "if else" decisions into code!
+
+# Example:
+# If I have enough money and the store is open, I will buy food.
+money = 100
+store_open = True
+
+if money >= 50 and store_open:
+    print("Buy food")
+else:
+    print("Wait or come back later")
+
+
+#

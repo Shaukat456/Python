@@ -2,7 +2,10 @@
 
 # Variables are used to store data values in Python. A variable is created by assigning a value to it using the assignment operator (=). The value of a variable can be changed or updated throughout the program.
 
-# Variables can store different types of data, such as numbers, strings, lists, tuples, dictionaries, etc. Python is a dynamically typed language, so you don't need to specify the data type of a variable when you create it.
+# Variables can store different types of data, such as numbers, strings, lists, tuples, dictionaries, etc.
+
+
+#  Python is a dynamically typed language, so you don't need to specify the data type of a variable when you create it.
 
 # Variable Naming Rules
 
