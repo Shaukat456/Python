@@ -330,3 +330,266 @@ set2 = {4, 5, 6}
 # 🔹 Convert to dictionary
 # 🔹 Sort the dictionary by marks (descending)
 # 🔹 Convert it to a list of tuples
+
+# ----------------------------------------------------------
+
+# Solutions
+# ---
+
+# ## ✅ **LISTS**
+
+# ### 🔁 1. Merge Two Lists Without Duplicates
+
+# ```python
+# a = [1, 2, 3, 4]
+# b = [3, 4, 5, 6]
+
+# merged = list(set(a + b))
+# print(merged)
+# ```
+
+# **Explanation:**
+
+# * `a + b` → combines two lists.
+# * `set()` → removes duplicates.
+# * `list()` → converts the result back to a list.
+
+# 🧠 **Real-world analogy**: Merging contact lists without repeating names.
+
+# ---
+
+# ### 🧠 2. Find All Pairs That Sum Up to a Target
+
+# ```python
+# nums = [1, 2, 3, 4, 5]
+# target = 6
+# pairs = []
+
+# for i in range(len(nums)):
+#     for j in range(i + 1, len(nums)):
+#         if nums[i] + nums[j] == target:
+#             pairs.append((nums[i], nums[j]))
+
+# print(pairs)
+# ```
+
+# **Explanation:**
+
+# * Loop through all unique pairs using nested loop.
+# * Check if sum of each pair equals target.
+
+# 🔧 **Use case**: Finding expense combinations that match a budget.
+
+# ---
+
+# ### 🛠️ 3. Flatten a Nested List
+
+# ```python
+# nested = [[1, 2], [3, 4], [5]]
+# flattened = []
+
+# for sublist in nested:
+#     for item in sublist:
+#         flattened.append(item)
+
+# print(flattened)
+# ```
+
+# **Explanation:**
+
+# * Two loops: one for each sublist, one for each item inside.
+
+# 🧠 **Analogy**: Flattening folders into one folder.
+
+# ---
+
+# ## ✅ **TUPLES**
+
+# ### 🔄 1. Group Tuples by First Element
+
+# ```python
+# data = [("fruit", "apple"), ("fruit", "banana"), ("vegetable", "carrot")]
+# grouped = {}
+
+# for category, item in data:
+#     if category not in grouped:
+#         grouped[category] = []
+#     grouped[category].append(item)
+
+# print(grouped)
+# ```
+
+# **Explanation:**
+
+# * Use a dictionary to group values by their first element (key).
+
+# 🔧 **Use case**: Grouping products by category in inventory.
+
+# ---
+
+# ### 🔄 2. Convert Tuple of Lists to List of Tuples
+
+# ```python
+# t = ([1, 2], [3, 4], [5, 6])
+
+# result = list(zip(*t))
+# print(result)
+# ```
+
+# **Explanation:**
+
+# * `zip(*t)` → transposes rows into columns.
+# * Converts structure from:
+
+#   * `([1, 2], [3, 4], [5, 6])` → `[(1, 3, 5), (2, 4, 6)]`
+
+# 🧠 **Analogy**: Turning columns into rows in a spreadsheet.
+
+# ---
+
+# ## ✅ **DICTIONARIES**
+
+# ### 🔁 1. Merge Two Dictionaries with Custom Conflict Resolution
+
+# ```python
+# a = {"x": 1, "y": 2}
+# b = {"y": 3, "z": 4}
+
+# merged = {}
+
+# for key in set(a) | set(b):  # union of all keys
+#     merged[key] = max(a.get(key, 0), b.get(key, 0))
+
+# print(merged)
+# ```
+
+# **Explanation:**
+
+# * Union of keys.
+# * Use `.get()` with default value.
+# * Choose higher value if key exists in both.
+
+# 🧠 **Use case**: Choosing best values from two data sources.
+
+# ---
+
+# ### 🔍 2. Key with Maximum Value
+
+# ```python
+# data = {"Ali": 87, "Zara": 92, "Sara": 78}
+# topper = max(data, key=data.get)
+# print(topper)
+# ```
+
+# **Explanation:**
+
+# * `data.get` fetches value for each key.
+# * `max()` compares based on that.
+
+# 🧠 **Use case**: Finding highest score.
+
+# ---
+
+# ### 🧮 3. Word Frequency Counter
+
+# ```python
+# sentence = "this is a test this is only a test"
+# words = sentence.split()
+# freq = {}
+
+# for word in words:
+#     freq[word] = freq.get(word, 0) + 1
+
+# print(freq)
+# ```
+
+# **Explanation:**
+
+# * `.split()` breaks string into list of words.
+# * `.get()` handles missing keys.
+
+# 🧠 **Use case**: Search engine indexing or keyword analysis.
+
+# ---
+
+# ## ✅ **SETS**
+
+# ### 🟰 1. Compare Two Lists (Ignore Order + Duplicates)
+
+# ```python
+# a = [1, 2, 3, 3]
+# b = [3, 2, 1]
+
+# print(set(a) == set(b))  # Output: True
+# ```
+
+# **Explanation:**
+
+# * Sets remove duplicates and are unordered.
+# * Comparing sets is ideal here.
+
+# ---
+
+# ### ❌ 2. Elements in A But Not in B
+
+# ```python
+# a = [1, 2, 3]
+# b = [2, 3, 4]
+
+# difference = list(set(a) - set(b))
+# print(difference)  # Output: [1]
+# ```
+
+# **Explanation:**
+
+# * Subtracting sets gives unique elements in one set.
+
+# ---
+
+# ### 🔁 3. Symmetric Difference
+
+# ```python
+# a = {1, 2, 3}
+# b = {3, 4, 5}
+
+# sym_diff = a ^ b
+# print(sym_diff)  # Output: {1, 2, 4, 5}
+# ```
+
+# **Explanation:**
+
+# * `^` operator gives items not in both sets.
+
+# ---
+
+# ## ✅ **BONUS INTEGRATED CHALLENGE**
+
+# ```python
+# students = [
+#     ("Ali", 85),
+#     ("Zara", 90),
+#     ("Sara", 78),
+#     ("Ali", 95)
+# ]
+
+# # 1. Remove duplicates, keep highest mark
+# student_dict = {}
+
+# for name, mark in students:
+#     if name not in student_dict or mark > student_dict[name]:
+#         student_dict[name] = mark
+
+# # 2. Sort dictionary by marks (descending)
+# sorted_students = sorted(student_dict.items(), key=lambda x: x[1], reverse=True)
+
+# print(sorted_students)
+# ```
+
+# **Explanation:**
+
+# * Use a dictionary to filter highest mark per student.
+# * Sort with `lambda` for descending order.
+
+# 🧠 **Use case**: Final leaderboard from raw submission logs.
+
+# ---
