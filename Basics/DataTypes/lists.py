@@ -1,23 +1,5 @@
 # A list is an ordered, mutable (changeable) collection of elements in Python. It is created using square brackets []. Lists can contain different data types, such as numbers, strings, and even other lists. Lists support indexing, slicing, and various operations like adding, removing, and updating elements.
 
-s = "hello"
-
-
-# Extract "ell" (from index 1 to index 4)
-print(s[0:2])  # Output: "ell"
-
-# Extract "hello" (from start to end)
-print(s[:])  # Output: "hello"
-
-# Extract "hel" (from start to index 3)
-print(s[:3])  # Output: "hel"
-
-# Extract "lo" (from index 3 to end)
-print(s[3:])  # Output: "lo"
-
-# Reverse the string
-print(s[::-1])  # Output: "olleh"
-
 
 my_list = [1, 2, 3, "apple", "banana"]
 print(my_list)  # Output: [1, 2, 3, 'apple', 'banana']

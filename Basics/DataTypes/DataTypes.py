@@ -65,6 +65,10 @@ print(word[3])  # Output: h (4th letter)
 print(word[0:3])  # Output: Pyt (characters from index 0 to 2)
 print(word[2:])  # Output: thon (from 3rd character till end)
 print(word[:4])  # Output: Pyth (first 4 characters)
+print(word[-1])  # Output: n (last character)
+print(word[-3:])  # Output: hon (last 3 characters)
+print(word[-4:-1])  # Output: tho (from 4th last to 2nd last character)
+
 
 ## Useful String Methods
 
