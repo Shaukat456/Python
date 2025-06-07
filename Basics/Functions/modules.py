@@ -141,3 +141,129 @@
 # ```
 
 # ---
+
+
+# importing modules in Python is a way to organize and reuse code effectively. Here’s a quick guide on how to create and use modules, along with some practical examples.
+
+
+# ```python
+# if __name__ == "__main__":
+# ```
+
+# Let’s break it down in simple terms — with **clear explanation, analogy, and use cases**.
+
+# ---
+
+# ## 🧠 What is `__name__ == "__main__"` in Python?
+
+# In Python, every file (module) has a built-in variable called `__name__`.
+
+# * If the file is **being run directly**, `__name__` is set to `"__main__"`.
+# * If the file is **being imported as a module**, `__name__` is set to the **module name** (i.e., filename without `.py`).
+
+# ---
+
+# ## 🧩 Analogy
+
+# Think of Python files as **TV channels**.
+
+# * When you're **watching directly**, it says: "You're watching *Live Now*" → `__name__ == "__main__"`
+# * When you're **recording the show to use later**, it doesn't say *Live Now*. It's just part of another collection → `__name__ != "__main__"`
+
+# ---
+
+# ## 💡 Why Use It?
+
+# ### ✅ To prevent some code from running **when the file is imported**.
+
+# Here’s a small example:
+
+# ```python
+# # file: math_utils.py
+
+# def add(a, b):
+#     return a + b
+
+# print("This runs no matter what")
+
+# if __name__ == "__main__":
+#     print("This runs only when this file is executed directly")
+#     print(add(2, 3))
+# ```
+
+# Now:
+
+# ### ✔ When you run this file directly:
+
+# ```bash
+# $ python math_utils.py
+# ```
+
+# Output:
+
+# ```
+# This runs no matter what
+# This runs only when this file is executed directly
+# 5
+# ```
+
+# ### ❌ When you import it in another file:
+
+# ```python
+# # file: main.py
+# import math_utils
+# ```
+
+# Output:
+
+# ```
+# This runs no matter what
+# ```
+
+# But it **does not run**:
+
+# ```
+# This runs only when this file is executed directly
+# ```
+
+# ---
+
+# ## 🧰 Use Cases
+
+# 1. ✅ Testing the script independently (e.g., testing functions)
+# 2. ✅ Creating reusable modules without unwanted execution
+# 3. ✅ Preventing side effects during imports
+# 4. ✅ Good practice for CLI (command-line interface) scripts
+
+# ---
+
+# ## 🛠 Real Project Use Example
+
+# ```python
+# # file: utils/logger.py
+
+# def log_info(msg):
+#     print(f"[INFO]: {msg}")
+
+# if __name__ == "__main__":
+#     print("Testing logger...")
+#     log_info("This is a test log")
+# ```
+
+# Now `logger.py` can be reused across projects, and still be tested alone.
+
+# ---
+
+# ## 🧠 Summary
+
+# | Action                    | `__name__` value |
+# | ------------------------- | ---------------- |
+# | File run directly         | `"__main__"`     |
+# | File imported as a module | `"module_name"`  |
+
+# ```python
+# if __name__ == "__main__":
+#     # this block only runs if the file is executed directly
+# ```
+
+# ---
