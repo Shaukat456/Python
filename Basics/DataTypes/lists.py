@@ -116,21 +116,60 @@ for num in numbers:
         even_numbers.append(num)
 
 print("Even numbers:", even_numbers)
+# Filtering Names Starting with 'A'
+names = ["Alice", "Bob", "Charlie", "Anna", "David"]
+
+names_starting_with_a = []
+for name in names:
+    if name.startswith("A"):
+        names_starting_with_a.append(name)
+
+print("Names starting with 'A':", names_starting_with_a)
 
 
-# Sorting a List (Bubble Sort Algorithm)
-numbers = [64, 34, 25, 12, 22, 11, 90]
-n = len(numbers)
+# List Comprehension Example
+# Example: Create a List of Squares of Even Numbers
+squares_of_evens = [x**2 for x in range(10) if x % 2 == 0]
 
-for i in range(n):
-    for j in range(0, n - i - 1):
-        if numbers[j] > numbers[j + 1]:
-            numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
+print("Squares of even numbers:", squares_of_evens)
 
-print("Sorted list:", numbers)
+# List Comprehension with Strings
 
+# Example: Create a List of Lengths of Each Word in a Sentence
+sentence = "Python is fun and powerful"
+word_lengths = [len(word) for word in sentence.split()]
+print("Lengths of each word:", word_lengths)
 
-# Conclusion
-# Use for loops when you know how many times you need to iterate.
-# Use while loops when you don't know the exact number of iterations (e.g., processing user input).
-# Nested loops are useful for 2D lists (tables, matrices, grids, etc.).
+# List Comprehension with Nested Lists
+# Example: Flatten a List of Lists
+
+nested_list = [[1, 2, 3], [4, 5], [6]]
+flattened_list = [item for sublist in nested_list for item in sublist]
+
+print("Flattened list:", flattened_list)
+
+# List Comprehension with Conditional Logic
+# Example: Create a List of Odd Numbers from 1 to 20
+odd_numbers = [x for x in range(1, 21) if x % 2 != 0]
+
+print("Odd numbers from 1 to 20:", odd_numbers)
+# List Comprehension with String Manipulation
+
+# Example: Create a List of Uppercase Words from a Sentence
+sentence = "Python is fun and powerful"
+uppercase_words = [word.upper() for word in sentence.split() if len(word) > 2]
+print("Uppercase words with more than 2 letters:", uppercase_words)
+
+# List Comprehension with Functions
+# Example: Create a List of Square Roots of Numbers from 1 to 10
+
+import math
+
+square_roots = [math.sqrt(x) for x in range(1, 11)]
+print("Square roots of numbers from 1 to 10:", square_roots)
+
+# List Comprehension with Multiple Conditions
+# Example: Create a List of Numbers from 1 to 50 that are Divisible by 3 and 5
+
+divisible_by_3_and_5 = [x for x in range(1, 51) if x % 3 == 0 and x % 5 == 0]
+print("Numbers from 1 to 50 divisible by 3 and 5:", divisible_by_3_and_5)

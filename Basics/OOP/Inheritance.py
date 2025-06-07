@@ -15,6 +15,10 @@
 # Imagine a **"Vehicle"** is the parent class. All vehicles share common features like wheels, engines, and speed. However, different types of vehicles (cars, bikes, trucks) have specialized behaviors.
 
 
+# super()# The `super()` function allows a child class to call methods from its parent class, enabling the reuse of code and properties.
+# This is like a child using their parent's knowledge to build upon it.
+
+
 #### **Python Code Example**
 # Parent class (Base class)
 class Vehicle:

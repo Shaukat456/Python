@@ -132,6 +132,3 @@ is_student = True
 print(f"Is student: {is_student}")
 
 # Real-world usage: Conditional statements, flags, etc.
-
-
-#
