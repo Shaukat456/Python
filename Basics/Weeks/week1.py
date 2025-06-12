@@ -110,3 +110,30 @@ print(f"{celsius}°C is equal to {fahrenheit}°F")
 # Output: 25.0°C is equal to 77.0°F
 
 # exercise related to variable assignment and arithmetic operations datatypes and operators
+
+# Build a simple calculator that performs addition, subtraction, multiplication, and division without using functions.
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+operation = input("Enter operation (+, -, *, /): ")
+if operation == "+":
+    result = num1 + num2
+
+elif operation == "-":
+    result = num1 - num2
+
+
+elif operation == "*":
+    result = num1 * num2
+
+elif operation == "/":
+    if num2 != 0:
+        result = num1 / num2
+    else:
+        result = "Error: Division by zero is not allowed."
+
+else:
+    result = "Error: Invalid operation."
+
+print(f"Result: {result}")
+
+# Output: Result: 7.0 (for example, if num1=3 and num2=4 and operation='+')
