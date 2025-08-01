@@ -425,7 +425,6 @@ print(
 | Indexed Access   |  ✓   |   ✓   |  ✗   |  ✗  |
 | Key-Value Pairs  |  ✗   |   ✗   |  ✓   |  ✗  |
 | Unique Elements  |  ✗   |   ✗   |  ✗** |  ✓  |
-| Hashable         |  ✗   |   ✓   |  ✗   |  ✗  |
 | Fast Lookup      |  ✗   |   ✗   |  ✓   |  ✓  |
 | Duplicates       |  ✓   |   ✓   |  ✗** |  ✗  |
 

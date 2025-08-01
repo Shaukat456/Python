@@ -34,9 +34,9 @@
 # ### Example:
 
 # ```python
-# import math
+import math
 
-# print(math.sqrt(16))  # 4.0
+print(math.sqrt(16))  # 4.0
 # ```
 
 # ---
@@ -50,8 +50,8 @@
 # ```python
 # # utils.py
 
-# def greet(name):
-#     return f"Hello, {name}!"
+def greet(name):
+    return f"Hello, {name}!"
 # ```
 
 # 2. **Use it in another file**
@@ -59,9 +59,9 @@
 # ```python
 # # main.py
 
-# import utils
+import utils
 
-# print(utils.greet("Ali"))  # Output: Hello, Ali!
+print(utils.greet("Ali"))  # Output: Hello, Ali!
 # ```
 
 # > This is how teams separate code into modules like `auth.py`, `db.py`, `email.py`, etc.
@@ -82,8 +82,8 @@
 # ```python
 # from math import pi, sqrt
 
-# print(pi)        # 3.14159
-# print(sqrt(9))   # 3.0
+print(pi)        # 3.14159
+print(sqrt(9))   # 3.0
 # ```
 
 # ---
@@ -123,21 +123,21 @@
 # 1. File: `shapes.py`
 
 # ```python
-# def area_square(side):
-#     return side * side
+def area_square(side):
+    return side * side
 
-# def area_circle(radius):
-#     import math
-#     return math.pi * radius * radius
+def area_circle(radius):
+    import math
+    return math.pi * radius * radius
 # ```
 
 # 2. File: `main.py`
 
 # ```python
-# import shapes
+import shapes
 
-# print(shapes.area_square(4))
-# print(shapes.area_circle(5))
+print(shapes.area_square(4))
+print(shapes.area_circle(5))
 # ```
 
 # ---
@@ -147,7 +147,7 @@
 
 
 # ```python
-# if __name__ == "__main__":
+if __name__ == "__main__":
 # ```
 
 # Let’s break it down in simple terms — with **clear explanation, analogy, and use cases**.
@@ -181,14 +181,14 @@
 # ```python
 # # file: math_utils.py
 
-# def add(a, b):
-#     return a + b
+def add(a, b):
+    return a + b
 
 # print("This runs no matter what")
 
-# if __name__ == "__main__":
-#     print("This runs only when this file is executed directly")
-#     print(add(2, 3))
+if __name__ == "__main__":
+    print("This runs only when this file is executed directly")
+    print(add(2, 3))
 # ```
 
 # Now:
