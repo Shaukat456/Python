@@ -60,6 +60,16 @@ b = 3
 c = a // b
 print(c)  # Output: 6 - This performs floor division of a by b.
 
+# Ceil division is not directly available in Python, but you can achieve it using the `math.ceil()` function.
+
+import math
+
+# Example of Ceil Division
+a = 20
+b = 3
+ceil_division = math.ceil(a / b)
+print(ceil_division)  # Output: 7 - This performs ceil division of a by b.
+
 # 8. Augmented Assignment
 a = 10
 b = 20
