@@ -18,14 +18,16 @@
 # 1. **Base Case**: When to STOP (like reaching the ground floor)
 # 2. **Recursive Case**: How to make the problem SMALLER
 
+
 # TEMPLATE (Pseudocode):
-# def recursive_function(input):
-#     # BASE CASE: When to stop
-#     if input_meets_stop_condition:
-#         return simple_result
-#
-#     # RECURSIVE CASE: Make problem smaller and call yourself
-#     return combine_result_with_recursive_function(smaller_input)
+def recursive_function(input):
+    # BASE CASE: When to stop
+    if input_meets_stop_condition:
+        return simple_result
+
+    # RECURSIVE CASE: Make problem smaller and call yourself
+    return combine_result_with_recursive_function(smaller_input)
+
 
 # Think of it like walking down stairs:
 # - Base case: "Am I on the ground floor?" → Stop
@@ -122,7 +124,7 @@
 # ---
 
 # ### ✅ 6. **Find GCD (Euclidean Algorithm)**
-
+# The GCD (Greatest Common Divisor) of two numbers is the largest number that divides both of them without leaving a remainder.
 # ```python
 # def gcd(a, b):
 #     if b == 0:
