@@ -257,6 +257,7 @@ def print_chars(word):
 
 def count_digits(number):
     # Convert to positive if negative
+    # abs function explain: abs() returns the absolute value of a number
     number = abs(number)
 
     if number == 0:

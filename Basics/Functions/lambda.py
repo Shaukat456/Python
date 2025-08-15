@@ -64,6 +64,12 @@ multiply = lambda x, y, z: x * y * z
 # map() applies a function to every item in an iterable
 # Perfect for transforming data collections
 
+
+# The map function takes two arguments: a function and an iterable (like a list)
+# It applies the function to each item in the iterable and returns a map object (an iterator)
+# You can convert the map object to a list or another collection type
+
+
 numbers = [1, 2, 3, 4, 5]
 
 # Using lambda with map() to square all numbers
