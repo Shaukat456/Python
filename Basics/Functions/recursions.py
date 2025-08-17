@@ -4,7 +4,8 @@
 
 # ## 🧠 What is Recursion?
 
-# **Recursion** is when a function calls **itself** to solve a **smaller version** of a problem.
+# **Recursion** is when a function calls **itself** to solve a **smaller version** of the same problem.
+
 
 # ### 🔁 Real-Life Analogy
 
