@@ -61,6 +61,199 @@ def recursive_function(input):
 #     return n * factorial(n - 1)  # recursive case
 # ```
 
+
+# ---
+
+# ## 🧮 Reminder: What is Factorial?
+
+# ```
+# factorial(4) = 4 × 3 × 2 × 1 = 24
+# ```
+
+# Recursive definition:
+
+# ```
+# factorial(n) = 1                if n == 1  (base case)
+# factorial(n) = n × factorial(n-1)   otherwise
+# ```
+
+# ---
+
+# ## 🐍 Code
+
+# ```python
+
+
+# ## 📊 Dry Run of `factorial(4)`
+
+# ### **Step 1**: Call `factorial(4)`
+
+# * `n = 4` → not base case
+# * Returns → `4 * factorial(3)`
+
+# ### **Step 2**: Call `factorial(3)`
+
+# * `n = 3` → not base case
+# * Returns → `3 * factorial(2)`
+
+# ### **Step 3**: Call `factorial(2)`
+
+# * `n = 2` → not base case
+# * Returns → `2 * factorial(1)`
+
+# ### **Step 4**: Call `factorial(1)`
+
+# * `n = 1` → base case hit
+# * Returns `1`
+
+# ---
+
+# ## 📤 Now Stack Starts Returning
+
+# * `factorial(1)` returns `1`
+# * `factorial(2)` returns `2 * 1 = 2`
+# * `factorial(3)` returns `3 * 2 = 6`
+# * `factorial(4)` returns `4 * 6 = 24`
+
+# Final Answer: **24**
+
+
+# ## 🔄 Visualization of Calls
+
+# **Going Down (Recursive Calls):**
+
+# ```
+# factorial(4)
+#  → 4 * factorial(3)
+#        → 3 * factorial(2)
+#              → 2 * factorial(1)
+#                    → return 1
+# ```
+
+# **Coming Up (Returning Values):**
+
+# ```
+# factorial(1) → 1
+# factorial(2) → 2
+# factorial(3) → 6
+# factorial(4) → 24
+
+
+## 🐍 Code
+
+# def factorial(n):
+#     if n == 1:       # base case
+#         return 1
+#     else:            # recursive case
+#         return n * factorial(n - 1)
+
+# print(factorial(4))
+# ```
+
+# ---
+
+# ## 🔎 Step-by-Step Explanation
+
+# ### **Step 0 — Start of Program**
+
+# * Python reads the code.
+# * It sees `print(factorial(4))` → so it calls the function `factorial(4)`.
+
+# ---
+
+# ### **Step 1 — First Call: factorial(4)**
+
+# * Function is called with `n = 4`.
+# * Inside function:
+
+#   * Is `n == 1`? → No (since `4 != 1`).
+#   * So it goes to the **else part**.
+#   * It says: “I need to return `4 * factorial(3)`.”
+# * But wait! To return that, it must first **calculate `factorial(3)`**.
+# * So it **pauses** and makes a new function call: `factorial(3)`.
+
+# ---
+
+# ### **Step 2 — Second Call: factorial(3)**
+
+# * Function is called with `n = 3`.
+# * Is `n == 1`? → No.
+# * So it says: “I need to return `3 * factorial(2)`.”
+# * But it doesn’t know `factorial(2)` yet → so it pauses and calls `factorial(2)`.
+
+# ---
+
+# ### **Step 3 — Third Call: factorial(2)**
+
+# * Function is called with `n = 2`.
+# * Is `n == 1`? → No.
+# * So it says: “I need to return `2 * factorial(1)`.”
+# * Again, it doesn’t know `factorial(1)` yet → so it pauses and calls `factorial(1)`.
+
+# ---
+
+# ### **Step 4 — Fourth Call: factorial(1)**
+
+# * Function is called with `n = 1`.
+# * Is `n == 1`? → Yes!
+# * **Base case reached** → It returns `1` immediately.
+# * No more function calls now — recursion stops growing.
+
+# ---
+
+# ## 📤 Step 5 — Start Returning Values
+
+# Now the functions that were paused will **resume one by one**, starting from the top of the stack.
+
+# 1. `factorial(1)` returned `1`.
+
+#    * So now `factorial(2)` can finish:
+
+#      * `factorial(2) = 2 * 1 = 2`
+#      * Returns `2`.
+
+# 2. Now `factorial(3)` can finish:
+
+#    * `factorial(3) = 3 * 2 = 6`
+#    * Returns `6`.
+
+# 3. Now `factorial(4)` can finish:
+
+#    * `factorial(4) = 4 * 6 = 24`
+#    * Returns `24`.
+
+# Finally, `print(factorial(4))` prints → **24**.
+
+# ---
+
+# ## 🖼 Visualizing the Call Stack
+
+# **When calling (going down):**
+
+# ```
+# factorial(4) → waiting for factorial(3)
+# factorial(3) → waiting for factorial(2)
+# factorial(2) → waiting for factorial(1)
+# factorial(1) → returns 1 (base case)
+# ```
+
+# **When returning (going up):**
+
+# factorial(1) = 1
+# factorial(2) = 2 * 1 = 2
+# factorial(3) = 3 * 2 = 6
+# factorial(4) = 4 * 6 = 24
+# ```
+
+
+# ## 🧠 Key Idea
+
+# * Recursion works in **two phases**:
+
+#   1. **Forward Phase (calls)**: Functions keep calling smaller versions until the base case is reached.
+#   2. **Backward Phase (returns)**: Once base case returns, the paused functions **resume one by one** in reverse order.
+
+
 # **Analogy:**
 # You're stacking plates. You can’t pick up the bottom one until you've picked all above it. Once the bottom (base case) is reached, you return and multiply back upward.
 
