@@ -75,7 +75,7 @@ class BankAccount:
 account = BankAccount(5000)
 print(account.get_balance())  # ✅ Allowed via method
 account.deposit(1000)  # ✅ Allowed via method
-# print(account.__balance)      # ❌ AttributeError: Cannot access private attribute
+print(account.__balance)  # ❌ AttributeError: Cannot access private attribute
 
 # ### **🔹 Key Takeaways**
 # - `self.__balance` **cannot be accessed directly** from outside the class.
