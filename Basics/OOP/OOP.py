@@ -44,8 +44,8 @@
 
 # ```python
 # # Objects (instances)
-# student1 = Student("Fatima", 21)
-# student2 = Student("Umer", 12)
+# student1 = Student("John", 21)
+# student2 = Student("david", 12)
 
 # student1.introduce()
 # student2.introduce()
@@ -54,8 +54,8 @@
 # ### 🖨️ Output:
 
 # ```
-# My name is Fatima and my roll number is 21.
-# My name is Umer and my roll number is 12.
+# My name is John and my roll number is 21.
+# My name is David and my roll number is 12.
 # ```
 
 # ---

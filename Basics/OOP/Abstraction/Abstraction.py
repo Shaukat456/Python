@@ -42,28 +42,32 @@
 # ```python
 # from abc import ABC, abstractmethod
 
+
 # # Abstract class
-# class Payment(ABC):
+class Payment(ABC):
 
-#     @abstractmethod
-#     def pay(self, amount):
-#         pass
+    @abstractmethod
+    def pay(self, amount):
+        pass
 
-# # Concrete class
-# class CreditCardPayment(Payment):
-#     def pay(self, amount):
-#         print(f"Paid {amount} using Credit Card.")
 
-# class PayPalPayment(Payment):
-#     def pay(self, amount):
-#         print(f"Paid {amount} using PayPal.")
+# Concrete class
+class CreditCardPayment(Payment):
+    def pay(self, amount):
+        print(f"Paid {amount} using Credit Card.")
+
+
+class PayPalPayment(Payment):
+    def pay(self, amount):
+        print(f"Paid {amount} using PayPal.")
+
 
 # # Driver code
-# payment1 = CreditCardPayment()
-# payment1.pay(100)
+payment1 = CreditCardPayment()
+payment1.pay(100)
 
-# payment2 = PayPalPayment()
-# payment2.pay(250)
+payment2 = PayPalPayment()
+payment2.pay(250)
 # ```
 
 # ### 🧾 **Output:**
@@ -129,25 +133,29 @@
 # Let’s model different animals making sounds, but we don't care *how* each animal makes the sound — only *that* they do.
 
 # ```python
-# from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
-# class Animal(ABC):
-#     @abstractmethod
-#     def make_sound(self):
-#         pass
 
-# class Dog(Animal):
-#     def make_sound(self):
-#         print("Dog says: Woof!")
+class Animal(ABC):
+    @abstractmethod
+    def make_sound(self):
+        pass
 
-# class Cat(Animal):
-#     def make_sound(self):
-#         print("Cat says: Meow!")
 
-# # Client code
-# animals = [Dog(), Cat()]
-# for animal in animals:
-#     animal.make_sound()
+class Dog(Animal):
+    def make_sound(self):
+        print("Dog says: Woof!")
+
+
+class Cat(Animal):
+    def make_sound(self):
+        print("Cat says: Meow!")
+
+
+# Client code
+animals = [Dog(), Cat()]
+for animal in animals:
+    animal.make_sound()
 # ```
 
 # ### 🧠 Analogy:
@@ -161,27 +169,32 @@
 # Different file types can be opened, but how they are opened internally differs.
 
 # ```python
-# from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
-# class FileReader(ABC):
-#     @abstractmethod
-#     def read(self):
-#         pass
 
-# class PDFReader(FileReader):
-#     def read(self):
-#         print("Reading a PDF file.")
+class FileReader(ABC):
+    @abstractmethod
+    def read(self):
+        pass
 
-# class WordReader(FileReader):
-#     def read(self):
-#         print("Reading a Word document.")
 
-# def display_content(reader: FileReader):
-#     reader.read()
+class PDFReader(FileReader):
+    def read(self):
+        print("Reading a PDF file.")
 
-# # Using the abstraction
-# display_content(PDFReader())
-# display_content(WordReader())
+
+class WordReader(FileReader):
+    def read(self):
+        print("Reading a Word document.")
+
+
+def display_content(reader: FileReader):
+    reader.read()
+
+
+# Using the abstraction
+display_content(PDFReader())
+display_content(WordReader())
 # ```
 
 # 💡 `display_content()` doesn't care about the file type. It only calls `.read()`.
@@ -193,27 +206,32 @@
 # Let’s abstract the concept of a game controller, where different platforms (PC, Console) implement differently.
 
 # ```python
-# from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
-# class GameController(ABC):
-#     @abstractmethod
-#     def press_button(self):
-#         pass
 
-# class PCController(GameController):
-#     def press_button(self):
-#         print("PC: WASD keys pressed")
+class GameController(ABC):
+    @abstractmethod
+    def press_button(self):
+        print("Button is pressed")
 
-# class ConsoleController(GameController):
-#     def press_button(self):
-#         print("Console: Gamepad button pressed")
 
-# # Player interacts
-# def play_game(controller: GameController):
-#     controller.press_button()
+class PCController(GameController):
+    def press_button(self):
+        print("PC: WASD keys pressed")
 
-# play_game(PCController())
-# play_game(ConsoleController())
+
+class ConsoleController(GameController):
+    def press_button(self):
+        print("Console: Gamepad button pressed")
+
+
+# Player interacts
+def play_game(controller: GameController):
+    controller.press_button()
+
+
+play_game(PCController())
+play_game(ConsoleController())
 # ```
 
 # ---
@@ -225,21 +243,25 @@
 # ```python
 # from abc import ABC, abstractmethod
 
-# class Bank(ABC):
-#     @abstractmethod
-#     def transfer(self, amount):
-#         pass
 
-# class HBL(Bank):
-#     def transfer(self, amount):
-#         print(f"HBL transferred Rs. {amount}")
+class Bank(ABC):
+    @abstractmethod
+    def transfer(self, amount):
+        pass
 
-# class Meezan(Bank):
-#     def transfer(self, amount):
-#         print(f"Meezan transferred Rs. {amount} with Islamic protocol")
 
-# bank1 = HBL()
-# bank2 = Meezan()
+class HBL(Bank):
+    def transfer(self, amount):
+        print(f"HBL transferred Rs. {amount}")
+
+
+class Meezan(Bank):
+    def transfer(self, amount):
+        print(f"Meezan transferred Rs. {amount} ")
+
+
+bank1 = HBL()
+bank2 = Meezan()
 
 # bank1.transfer(5000)
 # bank2.transfer(3000)
@@ -250,26 +272,31 @@
 # ## 🛍️ **Example 5: E-commerce Checkout System**
 
 # ```python
-# from abc import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
-# class CheckoutMethod(ABC):
-#     @abstractmethod
-#     def process_payment(self, amount):
-#         pass
 
-# class CardPayment(CheckoutMethod):
-#     def process_payment(self, amount):
-#         print(f"Processing card payment of Rs. {amount}")
+class CheckoutMethod(ABC):
+    @abstractmethod
+    def process_payment(self, amount):
+        pass
 
-# class CashOnDelivery(CheckoutMethod):
-#     def process_payment(self, amount):
-#         print(f"Will collect Rs. {amount} on delivery")
 
-# def complete_checkout(method: CheckoutMethod, amount):
-#     method.process_payment(amount)
+class CardPayment(CheckoutMethod):
+    def process_payment(self, amount):
+        print(f"Processing card payment of Rs. {amount}")
 
-# complete_checkout(CardPayment(), 1500)
-# complete_checkout(CashOnDelivery(), 2200)
+
+class CashOnDelivery(CheckoutMethod):
+    def process_payment(self, amount):
+        print(f"Will collect Rs. {amount} on delivery")
+
+
+def complete_checkout(method: CheckoutMethod, amount):
+    method.process_payment(amount)
+
+
+complete_checkout(CardPayment(), 1500)
+complete_checkout(CashOnDelivery(), 2200)
 # ```
 
 # ---

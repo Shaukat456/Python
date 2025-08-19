@@ -270,4 +270,4 @@ fetch_data()  # Too soon, will be blocked
 # | **Class-Based Decorator** | Uses a class instead of a function | Counting API requests |
 # | **Real-World Use Cases** | Authentication, caching, rate-limiting | Web apps, APIs, ML models |
 
-# 🚀 **Decorators are powerful tools that allow Python developers to write cleaner, reusable, and more maintainable code.**
+#  **Decorators are powerful tools that allow Python developers to write cleaner, reusable, and more maintainable code.**
