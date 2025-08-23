@@ -59,3 +59,28 @@ list2[0] = 99  # list1[0] is also 99
 # Use copy.deepcopy() for safe duplication of complex objects.
 # Use copy.copy() for simple, top-level copies.
 # For immutable types (int, str, tuple), assignment always copies by value.
+
+
+# # Call by reference / value
+# In Python, all function arguments are passed by reference.
+# However, the behavior differs for mutable and immutable objects.
+
+
+# Mutable objects (e.g., lists, dictionaries):
+def modify_list(lst):
+    lst.append(4)
+
+
+my_list = [1, 2, 3]
+modify_list(my_list)
+# my_list is now [1, 2, 3, 4]
+
+
+# Immutable objects (e.g., integers, strings):
+def modify_string(s):
+    s += " world"
+
+
+my_string = "Hello"
+modify_string(my_string)
+# my_string is still "Hello"

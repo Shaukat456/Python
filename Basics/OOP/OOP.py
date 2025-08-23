@@ -1,7 +1,3 @@
-# Here’s a beginner-friendly and **non-animal, non-car based** explanation of **class** and **object** in Python — using clear analogies and real-world examples 👇
-
-# ---
-
 # ## 🧱 **What is a Class?**
 
 # A **class** is like a **blueprint** or **template** for creating something.
