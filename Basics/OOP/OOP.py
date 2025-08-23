@@ -66,6 +66,8 @@
 # | Contains   | Methods, variables (but empty) | Actual data and behavior      |
 
 # ---
+# Instance meaning
+# An **instance** is a specific object created from a class. Each instance can have unique attributes and behaviors, even though they share the same class blueprint.
 
 # ## 🧠 Extra Analogy: Design & Execution
 
