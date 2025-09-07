@@ -1,4 +1,3 @@
-
 ---
 
 # 🔑 **What is Encapsulation?**
@@ -94,8 +93,8 @@ acc.withdraw(2000)        # Insufficient funds
 
 ### 1. **Bank Account Security**
 
-* Balance should not be directly changed (`acc.balance = -999` ❌).
-* Instead, use methods like `deposit()` and `withdraw()`.
+- Balance should not be directly changed (`acc.balance = -999` ❌).
+- Instead, use methods like `deposit()` and `withdraw()`.
 
 ---
 
@@ -127,10 +126,78 @@ print("After 2s:", p.get_position())
 
 # ✅ **Why Encapsulation is Important?**
 
-* **Security** → protects data from unauthorized access.
-* **Flexibility** → can control how variables are set/changed.
-* **Abstraction** → hides unnecessary details.
-* **Maintainability** → makes code cleaner and less error-prone.
+- **Security** → protects data from unauthorized access.
+- **Flexibility** → can control how variables are set/changed.
+- **Abstraction** → hides unnecessary details.
+- **Maintainability** → makes code cleaner and less error-prone.
 
 ---
 
+---
+
+## 🟢 Protected in Subclasses
+
+Protected members (`_`) are **directly accessible** in child classes.
+
+```python
+class Parent:
+    def __init__(self):
+        self._protected_var = "I am PROTECTED"
+
+class Child(Parent):
+    def show(self):
+        # ✅ Accessible directly in subclass
+        print("Child accessing:", self._protected_var)
+
+
+c = Child()
+c.show()              # ✅ Child accessing: I am PROTECTED
+print(c._protected_var)  # ⚠️ Accessible outside too (but discouraged)
+```
+
+👉 **Takeaway**: Protected variables are like "family secrets" → the children can freely use them.
+
+---
+
+## 🔴 Private in Subclasses
+
+Private members (`__`) are **not accessible** directly in child classes (because of name mangling).
+
+```python
+class Parent:
+    def __init__(self):
+        self.__private_var = "I am PRIVATE"
+
+class Child(Parent):
+    def show(self):
+        try:
+            # ❌ Direct access will fail
+            print("Child accessing:", self.__private_var)
+        except AttributeError:
+            print("Child cannot access __private_var")
+
+
+c = Child()
+c.show()
+
+# ⚠️ Can only be accessed with name mangling (not recommended)
+print(c._Parent__private_var)  # I am PRIVATE
+```
+
+👉 **Takeaway**: Private variables are like "personal diaries" → even children don’t get access unless they **hack it** (via name mangling).
+
+---
+
+## ✅ Summary (Subclass Access)
+
+| Member Type   | Subclass Access                         | Example Output                           |
+| ------------- | --------------------------------------- | ---------------------------------------- |
+| Protected `_` | ✅ Directly accessible                  | `"I am PROTECTED"`                       |
+| Private `__`  | ❌ Not accessible (unless name mangled) | `AttributeError` (unless `_Parent__var`) |
+
+---
+
+⚡ Quick rule of thumb:
+
+- Use `_protected` if you expect subclasses to use/modify it.
+- Use `__private` if you want to hide it even from subclasses.
