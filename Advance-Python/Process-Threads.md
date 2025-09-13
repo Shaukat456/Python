@@ -7,8 +7,8 @@ Let’s break down **threads & processes in Python** step by step with simple an
 
 ### 🎬 Imagine a Restaurant
 
-* **Process** → The whole restaurant (kitchen, staff, tables).
-* **Thread** → A waiter inside the restaurant.
+- **Process** → The whole restaurant (kitchen, staff, tables).
+- **Thread** → A waiter inside the restaurant.
 
 👉 Each **process** is independent (its own kitchen).
 👉 Each **thread** is part of the same process (waiters share the same kitchen).
@@ -17,9 +17,9 @@ Let’s break down **threads & processes in Python** step by step with simple an
 
 # ⚙️ 2. Process in Python
 
-* A **process** is an instance of a program running.
-* Each process has its **own memory space**.
-* If you create multiple processes, they **don’t share memory** (they communicate via messages).
+- A **process** is an instance of a program running.
+- Each process has its **own memory space**.
+- If you create multiple processes, they **don’t share memory** (they communicate via messages).
 
 ### 🐍 Example: Using `multiprocessing`
 
@@ -54,9 +54,9 @@ Worker B running in process 12346
 
 # ⚙️ 3. Thread in Python
 
-* A **thread** is like a lightweight worker **inside a process**.
-* Threads **share the same memory** of the process.
-* Useful when you want to do multiple tasks *in the same program*.
+- A **thread** is like a lightweight worker **inside a process**.
+- Threads **share the same memory** of the process.
+- Useful when you want to do multiple tasks _in the same program_.
 
 ### 🐍 Example: Using `threading`
 
@@ -105,10 +105,9 @@ Thread B finished
 
 # 🚦 5. Where to Use
 
-* **Processes** → When you need to use **multiple CPUs** (heavy computations like image processing, ML, simulations).
-* **Threads** → When your program does **waiting** (downloading files, handling many users, reading/writing to disk).
+- **Processes** → When you need to use **multiple CPUs** (heavy computations like image processing, ML, simulations).
+- **Threads** → When your program does **waiting** (downloading files, handling many users, reading/writing to disk).
 
 ---
 
 # ⚡ 6. Bonus: Python Limitation (GIL)
-
