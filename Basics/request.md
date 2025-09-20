@@ -456,3 +456,178 @@ Set up a small web server (Flask/FastAPI) that listens for incoming webhook even
 - How APIs _work_ (endpoints, verbs, params, headers, auth).
 - How to _handle real-world issues_ (pagination, rate limits, streaming, errors).
 - How APIs differ (REST vs GraphQL vs Webhooks).
+
+---
+
+# 🔹 1. Tokens
+
+**What they are:**
+A **token** is like a digital key that proves who you are when talking to an API. Instead of sending your username/password every time, you send a token.
+
+**Why tokens are used:**
+
+- More secure than sending credentials constantly.
+- Can be **limited** (only allow certain actions).
+- Can **expire** (reduces risk if stolen).
+
+**How they’re sent:**
+Most APIs expect them in the `Authorization` header:
+
+```http
+Authorization: Bearer <your_token_here>
+```
+
+**Python example:**
+
+```python
+import requests
+
+url = "https://api.example.com/protected"
+headers = {"Authorization": "Bearer MY_SECRET_TOKEN"}
+response = requests.get(url, headers=headers)
+print(response.json())
+```
+
+---
+
+# 🔹 2. Access vs Refresh Tokens
+
+This is especially common in **OAuth2 authentication** (used by Google, GitHub, Spotify, etc.).
+
+- **Access Token**
+
+  - Short-lived (minutes to hours).
+  - Used for actual API requests.
+  - If stolen, damage is limited.
+
+- **Refresh Token**
+
+  - Long-lived (days to months).
+  - Used only to request a _new access token_ when the old one expires.
+  - Never sent on every request (safer).
+
+**Workflow:**
+
+1. User logs in → API gives **Access Token + Refresh Token**.
+2. Use the Access Token in headers for requests.
+3. When Access Token expires → send Refresh Token to get a new Access Token.
+
+**Example (simplified):**
+
+```python
+import requests
+
+# Step 1: Use refresh token to get a new access token
+token_url = "https://api.example.com/oauth/token"
+data = {
+    "grant_type": "refresh_token",
+    "refresh_token": "YOUR_REFRESH_TOKEN",
+    "client_id": "YOUR_CLIENT_ID",
+    "client_secret": "YOUR_CLIENT_SECRET"
+}
+token_response = requests.post(token_url, data=data).json()
+access_token = token_response["access_token"]
+
+# Step 2: Use access token for actual API calls
+headers = {"Authorization": f"Bearer {access_token}"}
+api_url = "https://api.example.com/userinfo"
+response = requests.get(api_url, headers=headers)
+print(response.json())
+```
+
+👉 This way, users don’t have to log in repeatedly, but tokens still stay secure.
+
+---
+
+# 🔹 3. REST vs GraphQL
+
+## ✅ REST (Representational State Transfer)
+
+- **Concept:** Classic style of APIs.
+- **How it works:**
+
+  - Each resource has its own endpoint.
+  - You use HTTP verbs (`GET`, `POST`, `PUT`, `DELETE`) to act on resources.
+
+- **Example:**
+
+  - `GET /users/123` → Get user 123
+  - `POST /users` → Create a new user
+  - `GET /users/123/posts` → Get posts for user 123
+
+**Pros:**
+
+- Simple, widely used.
+- Easy to cache results.
+- Good for standard CRUD apps.
+
+**Cons:**
+
+- Often **overfetching** (get more data than needed).
+- Sometimes **underfetching** (need multiple requests).
+- API versioning is tricky (`/v1/`, `/v2/`).
+
+---
+
+## ✅ GraphQL
+
+- **Concept:** A query language for APIs.
+- **How it works:**
+
+  - Only one endpoint (`/graphql`).
+  - You send a **query** describing exactly the fields you want.
+
+- **Example Query:**
+
+```graphql
+{
+  user(id: "123") {
+    name
+    posts(limit: 2) {
+      title
+      comments {
+        text
+      }
+    }
+  }
+}
+```
+
+**Pros:**
+
+- No overfetching/underfetching → you get _exactly_ what you ask for.
+- Fewer requests → can fetch nested data in one call.
+- Strongly typed schema (easier for developers).
+
+**Cons:**
+
+- More complex to implement on the backend.
+- Harder to cache compared to REST.
+- Overly complex queries can stress servers.
+
+---
+
+# 🔹 When to Use What
+
+- Use **REST** when:
+
+  - You’re building a simple CRUD API.
+  - You want easy caching and simplicity.
+  - You’re integrating with most public APIs (majority are REST).
+
+- Use **GraphQL** when:
+
+  - Clients need flexibility (mobile/web apps want different fields).
+  - You want to minimize round trips to the server.
+  - Your API has complex, nested data relationships.
+
+---
+
+✅ **Summary:**
+
+- **Tokens** = digital keys.
+- **Access tokens** = short-lived keys, **Refresh tokens** = long-lived, used to renew access.
+- **REST** = multiple endpoints, standard HTTP verbs, simpler but can overfetch.
+- **GraphQL** = single endpoint, query-based, flexible but more complex.
+
+---
