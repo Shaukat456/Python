@@ -4,6 +4,12 @@ Here is your **Python Paper** with:
 - 🧠 **No repetitions**
 - 🎯 Includes **Polymorphism**, **Encapsulation**, and **Decorators**
 - 📋 Well-structured with a clear heading
+- 🏆 **Total: 40 marks**
+- 🎯 **Passing marks: 25**
+- 📊 **Section A: 20 marks (MCQs)**
+- 📊 **Section B: 8 marks (Conceptual & Code)**
+- 📊 **Section C: 7 marks (Loop Output)**
+- 📊 **Section D: 5 marks (Definitions)**
 
 ---
 
@@ -256,7 +262,7 @@ print(x, y)
 
 ---
 
-## 🧠 **Section B: Conceptual & Code Questions (30 Marks)**
+## 🧠 **Section B: Conceptual & Code Questions (8 Marks)**
 
 _(Each question carries 2 marks)_
 
@@ -333,7 +339,7 @@ print(add(2))
 
 ---
 
-## 🔁 **Section C: Loop Output Questions (10 Marks)**
+## 🔁 **Section C: Loop Output Questions (7 Marks)**
 
 _(Each carries 1 mark)_
 
@@ -448,7 +454,7 @@ for i in range(5, 0, -1):
 
 ---
 
-## 🔄 **Section D: Short Definitions (10 Marks)**
+## 🔄 **Section D: Short Definitions (5 Marks)**
 
 _(Each carries 1 mark)_
 
