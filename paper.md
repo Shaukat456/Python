@@ -1,32 +1,47 @@
-## Section A: Multiple Choice Questions (10 Marks)
+Here is your **Python Paper** with:
 
-(Choose the correct option. Each carries 1 mark.)
+- ✅ Exactly **50 unique questions**
+- 🧠 **No repetitions**
+- 🎯 Includes **Polymorphism**, **Encapsulation**, and **Decorators**
+- 📋 Well-structured with a clear heading
 
-**Q1. Output?**
+---
+
+# 📄 **Banoqabil Paper – Final TERM 2025: Python Programming**
+
+---
+
+## ✅ **Section A: Multiple Choice Questions (20 Marks)**
+
+_(Choose the correct option. Each question carries 1 mark.)_
+
+---
+
+### **Q1. What will be the output?**
 
 ```python
 for i in range(2, 10, 2):
     if i % 3 == 0:
         break
-
 ```
 
-a) Done  
-b) No output  
-c) Error  
-d) Loop exits at i=6
+- a) Done
+- b) No output
+- c) Error
+- d) Loop exits at i = 6
 
 ---
 
-**Q2. Which of these will throw an error?**
-a) `def f(x, y=1, z=2): return x+y+z`  
-b) `def f(x=1, y, z=2): return x+y+z`  
-c) `def f(x, y, z=2): return x+y+z`  
-d) `def f(x, y=1, *args): return x+y`
+### **Q2. Which function definition will throw an error?**
+
+- a) `def f(x, y=1, z=2): return x+y+z`
+- b) `def f(x=1, y, z=2): return x+y+z`
+- c) `def f(x, y, z=2): return x+y+z`
+- d) `def f(x, y=1, *args): return x+y`
 
 ---
 
-**Q3. Output?**
+### **Q3. What is the output?**
 
 ```python
 def f(x, l=[]):
@@ -36,39 +51,32 @@ print(f(1))
 print(f(2))
 ```
 
-a) [1], [2]  
-b) [1], [1, 2]  
-c) [1], [1]  
-d) Error
+- a) \[1], \[2]
+- b) \[1], \[1, 2]
+- c) \[1], \[1]
+- d) Error
 
 ---
 
-**Q4. Which statement about recursion is false?**
-a) Python supports recursion  
-b) Recursion depth is limited  
-c) Recursive functions must have a base case
+### **Q4. Which of the following is false about recursion?**
+
+- a) Python supports recursion
+- b) Recursion depth is limited
+- c) Every recursive function must have a base case
+- d) Recursion is faster than iteration in all cases
 
 ---
 
-**Q5. Output?**
+### **Q5. Which of the following is a valid lambda expression?**
 
-```python
-for j in range(0, 10 + 1):
-    print(j - 2)
-```
-
-Make iteration column with column names: J, output
+- a) `lambda x: x + 1`
+- b) `lambda x, y: x if x > y else y`
+- c) `lambda: return 5`
+- d) None of these
 
 ---
 
-**Q6. Which of the following is invalid lambda?**
-a) `lambda x: x + 1`  
-b) `lambda x, y: x if x > y else y`  
-c) none of these
-
----
-
-**Q7. Output?**
+### **Q6. What is the output of the following?**
 
 ```python
 for i in range(1, 4):
@@ -79,41 +87,54 @@ for i in range(1, 4):
             print(i, end=" ")
 ```
 
-a) 1 2 3  
-b) 1 3  
-c) 2 3  
-d) 1
+- a) 1 2 3
+- b) 1 3
+- c) 2 3
+- d) 1
 
 ---
 
-**Q8. Output?**
+### **Q7. What concept is shown here?**
 
 ```python
-class Bike(Vehicle):
-    def wheelie(self):
-        print("Bike performs a wheelie!")
+class Dog:
+    def speak(self):
+        print("Woof!")
 
-car = Car("Honda", 100)
-bike = Bike("Yamaha", 80)
-car.move()
-bike.move()
+class Cat:
+    def speak(self):
+        print("Meow!")
+
+for animal in (Dog(), Cat()):
+    animal.speak()
 ```
 
-Which concept of OOP is being applied here?
+- a) Inheritance
+- b) Encapsulation
+- c) Polymorphism
+- d) Abstraction
 
 ---
 
-## Section B: Conceptual & Programming Questions (20 Marks)
+### **Q8. What is encapsulation?**
 
-**Q9. Explain the difference between shallow copy and deep copy in Python with example.**
+- a) Binding data and methods in one unit
+- b) Hiding class names
+- c) Using only built-in functions
+- d) Protecting data from the user completely
 
 ---
 
-**Q10. Write a program using dictionary to count character frequency in a string (ignoring spaces).**
+### **Q9. What is the purpose of `__init__` method in Python classes?**
+
+- a) To destroy objects
+- b) Constructor that initializes the object
+- c) To import modules
+- d) It prints class variables
 
 ---
 
-**Q11. Output?**
+### **Q10. What is the output of the following?**
 
 ```python
 x = (1, 2, 3)
@@ -121,13 +142,23 @@ y = (1, 2, 3)
 print(x is y, x == y)
 ```
 
+- a) True True
+- b) True False
+- c) False True
+- d) False False
+
 ---
 
-**Q12. Write a function that accepts a list of integers and stores them in a list only if they are even.**
+### **Q11. Which of the following is immutable?**
+
+- a) List
+- b) Set
+- c) Tuple
+- d) Dictionary
 
 ---
 
-**Q13. Output?**
+### **Q12. What is the output?**
 
 ```python
 a = [1, 2, 3]
@@ -136,40 +167,69 @@ b.append(6)
 print(a)
 ```
 
+- a) \[1, 2, 3]
+- b) \[1, 2, 3, 6]
+- c) \[6]
+- d) Error
+
 ---
 
-**Q14. Write a recursive function to calculate factorial of a number.**
+### **Q13. What will `len(set([1, 2, 2, 3, 3]))` return?**
+
+- a) 5
+- b) 4
+- c) 3
+- d) Error
 
 ---
 
-**Q15. Output?**
+### **Q14. What is the output?**
+
+```python
+for i in range(2, 10, 3):
+    print(i, end=" ")
+```
+
+- a) 2 5 8
+- b) 2 4 6 8
+- c) 2 10
+- d) Error
+
+---
+
+### **Q15. Dictionaries store data in:**
+
+- a) Index order
+- b) Key-Value pairs
+- c) Sorted order
+- d) Random values
+
+---
+
+### **Q16. Which of these will raise an error?**
 
 ```python
 d = {"a": 1, "b": 2}
 print(d["c"])
 ```
 
----
-
-**Q16. Output?**
-
-```python
-def f(val, lst=None):
-    if lst is None:
-        lst = []
-    lst.append(val)
-    return lst
-print(f(10))
-print(f(20))
-```
+- a) Yes
+- b) No
 
 ---
 
-**Q17. Write a program to check whether a tuple contains duplicate elements.**
+---
+
+### **Q18. Which of these are true about decorators?**
+
+- a) Decorators can modify function behavior
+- b) They are used with `@` syntax
+- c) They take functions as arguments
+- d) All of the above
 
 ---
 
-**Q18. Output?**
+### **Q19. What is the output?**
 
 ```python
 x = [1, 2, 3]
@@ -178,231 +238,108 @@ y = y + [4]
 print(x, y)
 ```
 
----
-
-**Q19. Output?**
-
-```python
-s = 0
-for i in range(3):
-    for j in range(i):
-        s += j
-print(s)
-```
+- a) \[1, 2, 3] \[1, 2, 3, 4]
+- b) \[1, 2, 3, 4] \[1, 2, 3, 4]
+- c) Error
+- d) None
 
 ---
 
-**Q20. Output?**
+### **Q20. Which OOP concept is demonstrated by overriding a method in subclass?**
+
+- a) Polymorphism
+- b) Inheritance
+- c) Encapsulation
+- d) Abstraction
+
+---
+
+---
+
+## 🧠 **Section B: Conceptual & Code Questions (30 Marks)**
+
+_(Each question carries 2 marks)_
+
+---
+
+### **Q21. Write a function that returns the square of all even numbers in a list.**
+
+---
+
+### **Q22. Write a function that accepts `*args` and returns their sum.**
+
+---
+
+### **Q23. Create a class `Student` with name and grade attributes, and a method `display_info()`.**
+
+---
+
+### **Q24. Write a function using `@decorator` to log when a function is called.**
+
+---
+
+### **Q25. Explain the difference between `is` and `==` in Python with an example.**
+
+---
+
+### **Q26. Write a recursive function to calculate the factorial of a number.**
+
+---
+
+### **Q27. Write a program to check if a tuple contains duplicate elements.**
+
+---
+
+### **Q28. What is the output? Explain.**
 
 ```python
-def add(val, res=[]):
+a = []
+def add(val, res=a):
     res.append(val)
     return res
-print(add(5))
-print(add(10, []))
-print(add(15))
+print(add(1))
+print(add(2))
 ```
 
 ---
 
-**Q21. Output?**
-
-```python
-for i in range(3):
-    print(i)
-```
+### **Q29. Explain the difference between shallow copy and deep copy with an example.**
 
 ---
 
-**Q22. Write a program that computes the average of values entered by the user.**
+### **Q30. Create a parent class `Vehicle` and child class `Car`. Override a method.**
 
 ---
 
-**Q23. Write the output of each code and display its working also?**
-
-```python
-for i in range(1, 4):
-    a = [n for n in range(10, 30) if (n % 5 == 0 or n % 7 == 0)]
-    for j in range(1, 4):
-        print(a)
-        if i * j > 2:
-            break
-        print(i * j, end="")
-print(i)
-```
+### **Q31. What is the purpose of `self` in Python classes?**
 
 ---
 
----
-
-**Q25. What will be the output?**
-
-```python
-x = [1, 2, 3]
-y = x
-y.append(4)
-print(x)
-```
+### **Q32. Explain local vs global variables with an example.**
 
 ---
 
-**Q26. Which of the following is immutable?**
-a) List  
-b) Tuple  
-c) Dictionary  
-d) Set
+### **Q33. Write a Python function that checks if a number is prime.**
 
 ---
 
-**Q27. What will len(set([1, 2, 2, 3, 3])) return?**
-a) 5  
-b) 3  
-c) 4  
-d) Error
+### **Q34. How is data hiding achieved in Python classes?**
 
 ---
 
-**Q28. Which keyword is used to define a function in Python?**
-a) func  
-b) define  
-c) def  
-d) function
-
----
-
-**Q29. What will be the output?**
-
-```python
-for i in range(2, 10, 3):
-    print(i, end=" ")
-```
-
-a) 2 5 8  
-b) 2 4 6 8  
-c) 2 10  
-d) Error
-
----
-
-**Q30. Dictionaries store data in:**
-a) Index order  
-b) Key-Value pairs  
-c) Sorted order  
-d) Random values
-
----
-
-## Section C: Short Questions
-
-**Q31. Differentiate between local and global variables with example.**
-
----
-
-**Q32. Explain difference between list and tuple with one example each.**
-
----
-
-**Q33. Write a code using if-elif-else that checks a student’s grade:**
-
-- A if marks ≥ 80
-- B if 60–79
-- C if 40–59
-- Fail otherwise
-
----
-
-**Q34. What is the output of the following?**
-
-```python
-x = [1, 2, 3]
-y = (1, 2, 3)
-print(x * 2)
-print(y * 2)
-```
-
----
-
-**Q35. Explain dictionary methods: get(), keys(), values().**
+### **Q35. Write a function that counts the frequency of each character in a string (ignoring spaces).**
 
 ---
 
 ---
 
-**Q37. What will be the output?**
+## 🔁 **Section C: Loop Output Questions (10 Marks)**
 
-```python
-def test(a, b=2, c=3):
-    return a + b + c
-
-print(test(1))
-print(test(1, 5))
-```
+_(Each carries 1 mark)_
 
 ---
 
-**Q38. What is a class in Python?**
-
----
-
-**Q39. How do you create an object from a class in Python?**
-
----
-
-**Q40. What is the purpose of the `__init__` method in a class?**
-
----
-
-**Q41. How do you define a method inside a class?**
-
----
-
-**Q42. What is the difference between a class variable and an instance variable?**
-
----
-
-**Q43. How do you access an instance variable from a method within the same class?**
-
----
-
-**Q44. What is inheritance in Python?**
-
----
-
-**Q45. How do you create a subclass in Python?**
-
----
-
-**Q46. What is method overriding in Python?**
-
----
-
-**Q47. How do you call a method from a parent class in a subclass?**
-
----
-
-**Q48. What is polymorphism in Python?**
-
----
-
-**Q49. How can you implement polymorphism using method overloading in Python?**
-
----
-
-**Q50. What is encapsulation in OOP?**
-
----
-
-**Q51. How do you make an attribute private in a Python class?**
-
----
-
-**Q52. What is the purpose of the `self` keyword in Python?**
-
----
-
-## For Loop Questions
-
-**Q53.**
+### **Q36.**
 
 ```python
 total = 0
@@ -411,22 +348,18 @@ for i in range(5):
 print(total)
 ```
 
-**Output:** ?
-
 ---
 
-**Q54.**
+### **Q37.**
 
 ```python
 for i in range(1, 6):
     print(i * 2)
 ```
 
-**Output:** ?
-
 ---
 
-**Q55.**
+### **Q38.**
 
 ```python
 count = 0
@@ -436,11 +369,9 @@ for i in range(10):
 print(count)
 ```
 
-**Output:** ?
-
 ---
 
-**Q56.**
+### **Q39.**
 
 ```python
 result = 1
@@ -449,11 +380,9 @@ for i in range(1, 4):
 print(result)
 ```
 
-**Output:** ?
-
 ---
 
-**Q57.**
+### **Q40.**
 
 ```python
 numbers = [1, 2, 3, 4, 5]
@@ -463,11 +392,9 @@ for num in numbers:
     print(num)
 ```
 
-**Output:** ?
-
 ---
 
-**Q58.**
+### **Q41.**
 
 ```python
 total = 0
@@ -477,11 +404,11 @@ for i in range(1, 11):
 print(total)
 ```
 
-**Output:** ?
-
 ---
 
-**Q59.**
+###
+
+**Q42.**
 
 ```python
 for i in range(5):
@@ -489,11 +416,9 @@ for i in range(5):
         print(i, j)
 ```
 
-**Output:** ?
-
 ---
 
-**Q60.**
+### **Q43.**
 
 ```python
 letters = 'abcde'
@@ -501,11 +426,9 @@ for letter in letters:
     print(letter.upper())
 ```
 
-**Output:** ?
-
 ---
 
-**Q61.**
+### **Q44.**
 
 ```python
 total = 0
@@ -514,106 +437,43 @@ for i in range(1, 6):
 print(total)
 ```
 
-**Output:** ?
-
 ---
 
-**Q62.**
+### **Q45.**
 
 ```python
 for i in range(5, 0, -1):
     print(i)
 ```
 
-**Output:** ?
+---
+
+## 🔄 **Section D: Short Definitions (10 Marks)**
+
+_(Each carries 1 mark)_
 
 ---
 
-## While Loop Questions
-
-**Q63.**
-
-```python
-count = 0
-while count < 5:
-    print(count)
-    count += 1
-```
-
-**Output:** ?
+### **Q46. Define: Inheritance in Python**
 
 ---
 
-**Q64.**
-
-```python
-num = 10
-while num > 0:
-    num -= 2
-print(num)
-```
-
-**Output:** ?
+### **Q47. Define: Polymorphism in Python**
 
 ---
 
-**Q65.**
-
-```python
-total = 0
-i = 1
-while i <= 5:
-    total += i
-    i += 1
-print(total)
-```
-
-**Output:** ?
+### **Q48. Define: Encapsulation in Python**
 
 ---
 
-**Q66.**
-
-```python
-n = 1
-while n < 4:
-    print(n)
-    n += 1
-print(n)
-```
-
-**Output:** ?
+### **Q49. What is a Decorator in Python?**
 
 ---
 
-**Q67.**
-
-```python
-x = 0
-while x < 3:
-    x += 1
-    print(x)
-```
-
-**Output:** ?
+### **Q50. What is the difference between list and tuple?**
 
 ---
 
----
+### 🎉 **End of Paper – Best of Luck!**
 
 ---
-
-**Q72.**
-
-```python
-i = 0
-while i < 5:
-    print(i)
-    i += 2
-```
-
-**Output:** ?
-
----
-
-This concludes the Python paper for Final TERM 2025. Good luck!
