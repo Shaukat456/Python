@@ -1,25 +1,10 @@
-Here is your **Python Paper** with:
-
-- ✅ Exactly **50 unique questions**
-- 🧠 **No repetitions**
-- 🎯 Includes **Polymorphism**, **Encapsulation**, and **Decorators**
-- 📋 Well-structured with a clear heading
-- 🏆 **Total: 40 marks**
-- 🎯 **Passing marks: 25**
-- 📊 **Section A: 20 marks (MCQs)**
-- 📊 **Section B: 8 marks (Conceptual & Code)**
-- 📊 **Section C: 7 marks (Loop Output)**
-- 📊 **Section D: 5 marks (Definitions)**
-
----
-
 # 📄 **Banoqabil Paper – Final TERM 2025: Python Programming**
 
 ---
 
-## ✅ **Section A: Multiple Choice Questions (20 Marks)**
+## ✅ **Section A: Multiple Choice Questions (10 Marks)**
 
-_(Choose the correct option. Each question carries 1 mark.)_
+_(Choose the correct option. Each question carries 0.5 mark.)_
 
 ---
 
