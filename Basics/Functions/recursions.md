@@ -1,5 +1,3 @@
-# ---
-
 # ## 🧠 What is Recursion?
 
 # **Recursion** is when a function calls **itself** to solve a **smaller version** of the same problem.
@@ -523,10 +521,10 @@ return n + sum_to_n(n - 1)
 
 # Like building a pyramid, one row at a time
 
-def print_stars(n):
+def print*stars(n):
 if n == 0:
 return
-print("_" _ n)
+print("*" \_ n)
 print_stars(n - 1)
 
 # Usage: print_stars(4)
