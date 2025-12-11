@@ -2,7 +2,7 @@
 
 # **Recursion** is when a function calls **itself** to solve a **smaller version** of the same problem.
 
-# ### 🔁 Real-Life Analogy
+# 🔁 Real-Life Analogy
 
 # Imagine you're standing in front of a mirror that reflects another mirror behind you. You see **infinite reflections** — each one smaller than the last. That’s **recursion**: the same thing happening inside itself repeatedly, until a stop condition (called **base case**) is met.
 
@@ -45,7 +45,7 @@ return simple_result
 
 # ---
 
-# ### 🧮 1. **Factorial (n!)**
+# 🧮 1. **Factorial (n!)**
 
 # **Problem:**
 
@@ -93,25 +93,25 @@ return simple_result
 
 # ## 📊 Dry Run of `factorial(4)`
 
-# ### **Step 1**: Call `factorial(4)`
+# **Step 1**: Call `factorial(4)`
 
 # \* `n = 4` → not base case
 
 # _ Returns → `4 _ factorial(3)`
 
-# ### **Step 2**: Call `factorial(3)`
+# **Step 2**: Call `factorial(3)`
 
 # \* `n = 3` → not base case
 
 # _ Returns → `3 _ factorial(2)`
 
-# ### **Step 3**: Call `factorial(2)`
+# **Step 3**: Call `factorial(2)`
 
 # \* `n = 2` → not base case
 
 # _ Returns → `2 _ factorial(1)`
 
-# ### **Step 4**: Call `factorial(1)`
+# **Step 4**: Call `factorial(1)`
 
 # \* `n = 1` → base case hit
 
@@ -181,7 +181,7 @@ return simple_result
 
 # ## 🔎 Step-by-Step Explanation
 
-# ### **Step 0 — Start of Program**
+# **Step 0 — Start of Program**
 
 # \* Python reads the code.
 
@@ -189,7 +189,7 @@ return simple_result
 
 # ---
 
-# ### **Step 1 — First Call: factorial(4)**
+# **Step 1 — First Call: factorial(4)**
 
 # \* Function is called with `n = 4`.
 
@@ -207,7 +207,7 @@ return simple_result
 
 # ---
 
-# ### **Step 2 — Second Call: factorial(3)**
+# **Step 2 — Second Call: factorial(3)**
 
 # \* Function is called with `n = 3`.
 
@@ -219,7 +219,7 @@ return simple_result
 
 # ---
 
-# ### **Step 3 — Third Call: factorial(2)**
+# **Step 3 — Third Call: factorial(2)**
 
 # \* Function is called with `n = 2`.
 
@@ -231,7 +231,7 @@ return simple_result
 
 # ---
 
-# ### **Step 4 — Fourth Call: factorial(1)**
+# **Step 4 — Fourth Call: factorial(1)**
 
 # \* Function is called with `n = 1`.
 
@@ -313,7 +313,7 @@ return simple_result
 
 # ---
 
-# ### ➗ 2. **Fibonacci Series**
+# ➗ 2. **Fibonacci Series**
 
 # **Problem:**
 
@@ -335,7 +335,7 @@ return simple_result
 
 # ---
 
-# ### 📁 3. **Sum of List Elements**
+# 📁 3. **Sum of List Elements**
 
 # ```python
 
@@ -359,7 +359,7 @@ return simple_result
 
 # ---
 
-# ### ✅ 4. **Reverse a String**
+# ✅ 4. **Reverse a String**
 
 # ```python
 
@@ -375,7 +375,7 @@ return simple_result
 
 # ---
 
-# ### ✅ 5. **Check Palindrome Recursively**
+# ✅ 5. **Check Palindrome Recursively**
 
 # ```python
 
@@ -395,7 +395,7 @@ return simple_result
 
 # ---
 
-# ### ✅ 6. **Find GCD (Euclidean Algorithm)**
+# ✅ 6. **Find GCD (Euclidean Algorithm)**
 
 # The GCD (Greatest Common Divisor) of two numbers is the largest number that divides both of them without leaving a remainder.
 
@@ -413,7 +413,7 @@ return simple_result
 
 # ---
 
-# ### ✅ 7. **Binary Search (Recursively)**
+# ✅ 7. **Binary Search (Recursively)**
 
 # ```python
 
@@ -491,7 +491,7 @@ return simple_result
 
 # ## 🎯 Simple Warm-up Examples (Start Here!)
 
-# ### 🔢 1. **Countdown Timer**
+# 🔢 1. **Countdown Timer**
 
 # Like counting down before a rocket launch: 5, 4, 3, 2, 1, Blast off!
 
@@ -506,7 +506,7 @@ countdown(n - 1)
 
 # Output: 5, 4, 3, 2, 1, Blast off! 🚀
 
-# ### 📊 2. **Sum from 1 to N**
+# 📊 2. **Sum from 1 to N**
 
 # Like adding up your daily savings: Day 1: $1, Day 2: $2, etc.
 
@@ -517,7 +517,7 @@ return n + sum_to_n(n - 1)
 
 # Usage: sum_to_n(5) = 5 + 4 + 3 + 2 + 1 = 15
 
-# ### 🌟 3. **Print Stars Pattern**
+# 🌟 3. **Print Stars Pattern**
 
 # Like building a pyramid, one row at a time
 
@@ -539,7 +539,7 @@ print_stars(n - 1)
 
 # \*
 
-# ### 🔤 4. **Print Each Character**
+# 🔤 4. **Print Each Character**
 
 # Like reading a book letter by letter
 
@@ -557,7 +557,7 @@ print_chars(word[1:]) # Recursive call with rest of string
 
 # ## 🏠 Real-World Use Cases
 
-# ### 📱 5. **Phone Number Digits Counter**
+# 📱 5. **Phone Number Digits Counter**
 
 # Count how many digits are in a phone number
 
@@ -572,7 +572,7 @@ number = abs(number)
 
 # Usage: count_digits(1234567890) = 10 digits
 
-# ### 💰 6. **Calculate Compound Interest**
+# 💰 6. **Calculate Compound Interest**
 
 # Like money growing in your savings account year by year
 
@@ -586,7 +586,7 @@ return compound_interest(new_amount, years - 1, rate)
 
 # Year 1: $1050, Year 2: $1102.50, Year 3: $1157.63
 
-# ### 🍕 7. **Pizza Slice Distribution**
+# 🍕 7. **Pizza Slice Distribution**
 
 # Divide pizza slices equally among friends
 
@@ -604,7 +604,7 @@ return total_slices # Last person gets remaining slices
 
 # Shows how slices are distributed among 3 people
 
-# ### 📚 8. **Book Pages Reading Tracker**
+# 📚 8. **Book Pages Reading Tracker**
 
 # Track daily reading progress
 
@@ -621,7 +621,7 @@ return pages_per_day + pages_read_total(pages_per_day, days - 1)
 
 # ## 🎮 Interactive Examples
 
-# ### 🎲 9. **Dice Roll Simulator**
+# 🎲 9. **Dice Roll Simulator**
 
 # Keep rolling until you get a 6
 
@@ -642,7 +642,7 @@ print(f"Roll {rolls}: Got {result}")
 
 # Keeps rolling until you get a 6
 
-# ### 🛒 10. **Shopping Cart Total**
+# 🛒 10. **Shopping Cart Total**
 
 # Calculate total price of items in nested categories
 
@@ -665,7 +665,7 @@ return 0
 
 # ## 🧮 Mathematical Examples Made Simple
 
-# ### ➕ 11. **Digital Root**
+# ➕ 11. **Digital Root**
 
 # Keep adding digits until single digit (like finding your lucky number!)
 
@@ -684,7 +684,7 @@ return (n % 10) + sum_digits(n // 10)
 
 # Usage: digital_root(987) → 9+8+7=24 → 2+4=6
 
-# ### 🔄 12. **Number Reverser**
+# 🔄 12. **Number Reverser**
 
 # Reverse a number like looking in a mirror
 
@@ -699,7 +699,7 @@ return reversed_n
 
 # Usage: reverse_number(1234) = 4321
 
-# ### 🏆 13. **Find Maximum in List**
+# 🏆 13. **Find Maximum in List**
 
 # Like finding the tallest person in a line
 
@@ -717,7 +717,7 @@ return lst[0]
 
 # ## 🌳 Tree-like Structure Examples
 
-# ### 📁 14. **Folder Size Calculator**
+# 📁 14. **Folder Size Calculator**
 
 # Calculate total size of files in folders and subfolders
 
@@ -736,7 +736,7 @@ return structure # It's a file
 
 # Usage: folder_size([100, 200, [50, 75], 300]) = 725 MB
 
-# ### 👨‍👩‍👧‍👦 15. **Family Tree Age Sum**
+# 👨‍👩‍👧‍👦 15. **Family Tree Age Sum**
 
 # Add up ages in a family tree
 
@@ -765,7 +765,7 @@ return family_member # Just an age
 
 # ## 🚀 Challenge Problems (Try These!)
 
-# ### 🎯 Easy Challenges
+# 🎯 Easy Challenges
 
 # 1. **Step Counter**: Count steps going up stairs (each step adds 1)
 
@@ -790,7 +790,7 @@ if weeks == 0:
 return 0
 return weekly_amount + total_allowance(weekly_amount, weeks - 1)
 
-# ### 🎯 Medium Challenges
+# 🎯 Medium Challenges
 
 # 4. **Password Strength Checker**: Check each character recursively
 
