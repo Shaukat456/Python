@@ -1,187 +1,222 @@
-# ## 🧠 What is Error Handling?
+---
+---
 
-# When your program encounters something unexpected — like a wrong input, a missing file, or a math error — it stops (crashes) and shows a **traceback**.
+# 🚨 **Error Handling in Python**
 
-# But with **error handling**, you can catch those errors and decide what to do next — like showing a message instead of crashing.
+## Error handling lets your program **handle crashes gracefully** instead of stopping suddenly.
 
-# ---
+## 🔹 1️⃣ Types of Errors
 
-# ## 🔍 Real-Life Analogy
+### ❌ **Syntax Error** (code won’t run)
 
-# Imagine you're withdrawing cash from an ATM.
+```python
+if True
+    print("Hello")
+```
 
-# If there's **no internet**, it **doesn't crash** — it shows:
+---
 
-# > "Sorry, the transaction cannot be completed right now."
+### ❌ **Runtime Error (Exception)** (program crashes while running)
 
-# Python’s error handling works similarly — instead of crashing, you **gracefully handle** errors.
+```python
+print(10 / 0)   # ZeroDivisionError
+```
 
-# ---
+---
 
-# ## ✅ The Basic Structure: `try` / `except`
+# 🔹 2️⃣ What is an Exception?
 
-# ```python
+An **exception** is an error that occurs **during execution**.
 
-# try:
+Common exceptions:
 
-# # risky code here
+| Exception           | Cause                   |
+| ------------------- | ----------------------- |
+| `ZeroDivisionError` | Divide by zero          |
+| `ValueError`        | Wrong value type        |
+| `TypeError`         | Wrong data type         |
+| `IndexError`        | List index out of range |
+| `KeyError`          | Missing dictionary key  |
+| `FileNotFoundError` | File not found          |
 
-# x = int(input("Enter a number: "))
+---
 
-# result = 10 / x
+# 🔹 3️⃣ Basic `try` – `except`
 
-# print("Result:", result)
+### ❌ Without error handling
 
-# except ZeroDivisionError:
+```python
+x = int(input("Enter number: "))
+print(10 / x)
+```
 
-# print("You can't divide by zero!")
+### ✅ With error handling
 
-# except ValueError:
+```python
+try:
+    x = int(input("Enter number: "))
+    print(10 / x)
+except:
+    print("Something went wrong")
+```
 
-# print("Please enter a valid number!")
+✔ Program doesn’t crash
+✔ Error handled safely
 
-# ```
+---
 
-# ### 🔁 Explanation:
+# 🔹 4️⃣ Catching Specific Errors (BEST PRACTICE)
 
-# \* `try`: Run the code that **might** cause an error.
+```python
+try:
+    x = int(input("Enter number: "))
+    print(10 / x)
+except ValueError:
+    print("Please enter a number")
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+```
 
-# \* `except`: Catch a specific error and handle it.
+---
 
-# \* You can catch **multiple** types of errors.
+# 🔹 5️⃣ `else` Block
 
-# ---
+Runs **only if no error occurs**.
 
-# ## 📚 Common Exceptions in Python
+```python
+try:
+    x = int(input("Enter number: "))
+    print(10 / x)
+except Exception as e:
+    print("Error:", e)
+else:
+    print("Calculation successful")
+```
 
-# | Error | When It Happens |
+---
 
-# | ------------------- | ----------------------------------------------------- |
+# 🔹 6️⃣ `finally` Block
 
-# | `ZeroDivisionError` | Dividing by zero |
+Runs **no matter what** (error or not).
 
-# | `ValueError` | Wrong type of value (e.g., converting `"abc"` to int) |
+```python
+try:
+    file = open("data.txt")
+    content = file.read()
+except FileNotFoundError:
+    print("File not found")
+finally:
+    print("Closing file")
+```
 
-# | `TypeError` | Incompatible types (e.g., `"5" + 2`) |
+✔ Used for cleanup (files, DB connections)
 
-# | `IndexError` | List index out of range |
+---
 
-# | `KeyError` | Accessing a missing key in a dictionary |
+# 🔹 7️⃣ Handling Multiple Exceptions Together
 
-# | `FileNotFoundError` | Trying to open a file that doesn’t exist |
+```python
+try:
+    x = int(input())
+    y = int(input())
+    print(x / y)
+except (ValueError, ZeroDivisionError):
+    print("Invalid input or division by zero")
+```
 
-# ---
+---
 
-# ## 🛠 Real-World Example: Handling File Read
+# 🔹 8️⃣ Raising Your Own Exceptions (`raise`)
 
-# ```python
+### Example: Age validation
 
-# try:
+```python
+def check_age(age):
+    if age < 18:
+        raise ValueError("Age must be 18 or above")
+    return "Access granted"
 
-# with open("data.txt", "r") as file:
+print(check_age(20))
+```
 
-# content = file.read()
+---
 
-# print(content)
+# 🔹 9️⃣ Custom Exceptions (ADVANCED)
 
-# except FileNotFoundError:
+```python
+class InsufficientBalanceError(Exception):
+    pass
 
-# print("The file was not found. Please check the name.")
+def withdraw(balance, amount):
+    if amount > balance:
+        raise InsufficientBalanceError("Not enough balance")
+    return balance - amount
 
-# ```
+print(withdraw(1000, 1500))
+```
 
-# ### 🧠 Analogy:
+---
 
-# Just like a librarian tells you a book isn’t available rather than quitting their job, Python tells you the file isn't there instead of crashing.
+# 🌍 REAL-WORLD USE CASES
 
-# ---
+---
 
-# ## 🔁 Using `else` and `finally`
+## ✅ Use Case 1: User Login Input
 
-# ```python
+```python
+try:
+    password = input("Enter password: ")
+    if len(password) < 6:
+        raise ValueError("Password too short")
+except ValueError as e:
+    print(e)
+```
 
-# try:
+---
 
-# num = int(input("Enter a number: "))
+## ✅ Use Case 2: API Data Parsing
 
-# print("You entered:", num)
+```python
+data = {"name": "Ali"}
 
-# except ValueError:
+try:
+    print(data["age"])
+except KeyError:
+    print("Age field missing")
+```
 
-# print("That's not a number.")
+---
 
-# else:
+## ✅ Use Case 3: File Handling
 
-# print("No error occurred!")
+```python
+try:
+    with open("data.txt") as f:
+        print(f.read())
+except FileNotFoundError:
+    print("File not found")
+```
 
-# finally:
+---
 
-# print("This will run no matter what.")
+## 🔥 Best Practices (IMPORTANT)
 
-# ```
+✔ Catch **specific exceptions**
+✔ Don’t use empty `except:`
+✔ Use `finally` for cleanup
+✔ Raise meaningful errors
+✔ Don’t hide bugs
 
-# ### ✅ Summary:
+---
 
-# \* `try`: code that might break
+# ⭐ Summary
 
-# \* `except`: what to do if it breaks
+| Keyword   | Purpose            |
+| --------- | ------------------ |
+| `try`     | Code that may fail |
+| `except`  | Handle error       |
+| `else`    | Runs if no error   |
+| `finally` | Always runs        |
+| `raise`   | Throw error        |
 
-# \* `else`: runs **if no exception**
-
-# \* `finally`: **always** runs (cleanup, closing files, etc.)
-
-# ---
-
-# ## 🧪 Raising Your Own Errors (Advanced)
-
-# ```python
-
-# age = -5
-
-# if age < 0:
-
-# raise ValueError("Age cannot be negative")
-
-# ```
-
-# You can use `raise` to throw an error if **your custom rule is violated**.
-
-# 🧠 Use case: Web forms, authentication systems, scientific inputs, etc.
-
-# ---
-
-# ## 🧩 Capstone Challenge (All Concepts)
-
-# ```python
-
-# def divide(a, b):
-
-# try:
-
-# result = a / b
-
-# except ZeroDivisionError:
-
-# return "Error: Cannot divide by zero"
-
-# except TypeError:
-
-# return "Error: Invalid types"
-
-# else:
-
-# return f"Success: {result}"
-
-# finally:
-
-# print("End of operation")
-
-# print(divide(10, 2)) # Success
-
-# print(divide(10, 0)) # Division error
-
-# print(divide("10", "2")) # Type error
-
-# ```
-
-# ---
+---
