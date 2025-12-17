@@ -1,6 +1,143 @@
 ---
 ---
 
+# ⏱️ **Compile Time vs Runtime**
+
+## 🔹 What is Compile Time?
+
+**Compile time** is the phase when **code is translated** (compiled) **before execution**.
+
+👉 Errors found here are called **compile-time errors**.
+
+### Happens:
+
+- Before program runs
+- While converting source code → machine/byte code
+
+---
+
+## 🔹 What is Runtime?
+
+**Runtime** is the phase when the **program is actually executing**.
+
+👉 Errors found here are called **runtime errors (exceptions)**.
+
+---
+
+# 🧠 Important Python Note (Very Important)
+
+Python is an **interpreted language**, not fully compiled like C/C++.
+
+✔ Python **compiles to bytecode first**, then runs
+✔ Many errors appear **at runtime**, not compile time
+
+So in Python:
+
+- **Syntax errors** → compile time
+- **Exceptions** → runtime
+
+---
+
+# 🔴 COMPILE-TIME ERRORS
+
+### ❌ Syntax Error (Python example)
+
+```python
+if True
+    print("Hello")
+```
+
+❌ Missing colon → detected **before execution**
+
+---
+
+### ❌ Indentation Error
+
+```python
+def test():
+print("Hi")
+```
+
+---
+
+### ❌ Name Errors (sometimes detected early)
+
+```python
+print(x)
+```
+
+---
+
+# 🔵 RUNTIME ERRORS (EXCEPTIONS)
+
+### ❌ Divide by zero
+
+```python
+print(10 / 0)
+```
+
+---
+
+### ❌ Wrong input type
+
+```python
+x = int("abc")
+```
+
+---
+
+### ❌ File not found
+
+```python
+open("missing.txt")
+```
+
+---
+
+# 🌍 REAL-WORLD ANALOGY
+
+### 🏗️ Compile Time = **Building inspection**
+
+- Blueprints checked
+- Structural mistakes found
+- Building not used yet
+
+### 🚗 Runtime = **Driving the car**
+
+- Engine failure
+- Flat tire
+- Accident during driving
+
+---
+
+# 🧠 COMPARISON TABLE
+
+| Feature        | Compile Time        | Runtime                |
+| -------------- | ------------------- | ---------------------- |
+| When           | Before execution    | During execution       |
+| Errors         | Syntax, indentation | Exceptions             |
+| Python Example | `SyntaxError`       | `ZeroDivisionError`    |
+| Fix needed     | Code structure      | Logic / input handling |
+| Detected       | Early               | While program runs     |
+
+---
+
+# 🔥 Language Comparison (Extra Knowledge)
+
+| Language | Compile Time Errors | Runtime Errors |
+| -------- | ------------------- | -------------- |
+| C / C++  | Very strict         | Fewer          |
+| Java     | Many                | Many           |
+| Python   | Few                 | Many           |
+
+---
+
+# ⭐ Interview One-Liner
+
+> **Compile-time errors are detected before program execution, while runtime errors occur during program execution.**
+
+---
+
 # 🚨 **Error Handling in Python**
 
 ## Error handling lets your program **handle crashes gracefully** instead of stopping suddenly.
