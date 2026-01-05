@@ -1,6 +1,4 @@
-Great question 👍 because **Pydantic** is at the heart of how FastAPI works.
-Let’s break it down step by step.
-
+---
 ---
 
 # 🧩 **What is Pydantic?**
