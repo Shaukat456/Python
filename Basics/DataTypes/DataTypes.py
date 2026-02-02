@@ -74,7 +74,7 @@ print(word[-4:-1])  # Output: tho (from 4th last to 2nd last character)
 
 ### - `len()`: Length of a string
 
-print(len(word))  # Output: 6
+print(len(word))  # Output: 4
 
 ### - `.lower()` and `.upper()`: Change case
 
